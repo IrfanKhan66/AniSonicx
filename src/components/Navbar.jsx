@@ -28,7 +28,7 @@ export default function Navbar() {
     const openSearch = () => {
         if (searchRef.current.classList.contains('-transform-y-10')) {
             searchRef.current.classList.add('translate-y-20')
-            searchRef.current.classList.add('opacity-1')
+            searchRef.current.classList.add('opacity-100')
             searchRef.current.classList.remove('opacity-0')
             searchRef.current.classList.remove('-transform-y-10')
             // headRef.current.classList.remove('h-16')
@@ -36,7 +36,7 @@ export default function Navbar() {
         } else {
             searchRef.current.classList.add('-transform-y-10')
             searchRef.current.classList.add('opacity-0')
-            searchRef.current.classList.remove('opacity-1')
+            searchRef.current.classList.remove('opacity-100')
             searchRef.current.classList.remove('translate-y-20')
             // headRef.current.classList.remove('h-32')
             // headRef.current.classList.add('h-16')

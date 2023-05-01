@@ -56,6 +56,22 @@ const FETCH_FROM_GRAPHQL = {
         } catch (err) {
             console.log(`ERROR IN API CALL :- ${err}`)
         }
+    },
+    FETCH_UPCOMING: async () => {
+        try {
+            const res = await graphql_api.post('', { query: config.QUERIES.UPCOMING });
+            return res.data.data.Page.media;
+        } catch (err) {
+            console.log(`ERROR IN API CALL :- ${err}`)
+        }
+    },
+    FETCH_AIRING_SCHEDULE: async () => {
+        try {
+            const res = await graphql_api.post('', { query: config.QUERIES.AIRING_SCHEDULE });
+            return res.data.data.Page.media;
+        } catch (err) {
+            console.log(`ERROR IN API CALL :- ${err}`)
+        }
     }
 }
 

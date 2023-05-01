@@ -20,7 +20,7 @@ const AnimeItem = (props) => {
       </a>
       <div className='inline-flex justify-between w-[150px] py-1.5 select-none overflow-hidden'>
         <div className='text-xl truncate '>{props.title.userPreffered || props.title.english || props.title.romaji || props.title.native || "Untitled"}</div>
-        <a className='self-center right-0 absolute bg-red-500 px-1 rounded-sm' href={`/${props.format}`}>{props.format}</a>
+        <a className='self-center right-0 absolute bg-red-500 px-1 rounded-sm' href={`/${props.format.toLowerCase()}`}>{props.format}</a>
       </div>
     </div>
   )

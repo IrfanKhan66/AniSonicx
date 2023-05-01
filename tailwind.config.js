@@ -18,6 +18,8 @@ export default {
       'hi-res-laptop': '1280px'
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
 

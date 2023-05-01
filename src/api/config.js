@@ -129,6 +129,56 @@ const QUERIES = {
     }
     }
     }`,
+  UPCOMING: `query {
+      Page {
+        media(status: NOT_YET_RELEASED, sort: POPULARITY_DESC) {
+          id
+          title {
+            romaji
+            english
+            native
+          }
+          coverImage {
+            extraLarge
+            medium
+          }
+          startDate {
+            year
+            month
+            day
+          }
+          favourites
+          status
+        }
+      }
+    }
+    `,
+  AIRING_SCHEDULE: `query {
+    Page {
+      media:airingSchedules(notYetAired: true) {
+        id
+        episode
+        media {
+          id
+          format
+          coverImage {
+            extraLarge
+            large
+            medium
+          }
+          favourites
+          description
+          title {
+            romaji
+            english
+            native
+          }
+        }
+        airingAt
+      }
+    }
+  }
+  `
 }
 
 const API_CALLS = {
